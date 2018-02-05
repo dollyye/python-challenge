@@ -5,6 +5,7 @@ csvfiles = ['1','2']
 voters = []
 voteCount = []
 candidates = []
+candidateList = []
 
 for file in csvfiles:
     election_data_CSV = os.path.join('election_data_' + file + '.csv')
@@ -17,7 +18,7 @@ for file in csvfiles:
         for row in csvreader:
             voters.append(str(row[0]))
             candidates.append(str(row[2]))
-            candidateList = list(set(candidates))
+            candidateList = set(candidates)
 
 totalVotes = len(voters)
 
