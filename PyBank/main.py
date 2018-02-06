@@ -15,7 +15,7 @@ for file in csvfiles:
     budgetCSV = os.path.join('budget_data_' + file + '.csv')
     outputTXT = os.path.join('financial_analysis_results_'+ file + '.txt')
 
-    # Initiate lists as empty
+    # Delete contents in lists to start empty
     del date[:]
     del revenue[:]
 
